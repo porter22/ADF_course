@@ -55,7 +55,8 @@
 		],
 		"parameters": {
 			"Entity": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "BillOfMaterials"
 			}
 		},
 		"annotations": []
