@@ -1,0 +1,57 @@
+{
+	"name": "CopyAWEntities",
+	"properties": {
+		"activities": [
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@variables('Entities')",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Execute Pipeline1",
+							"type": "ExecutePipeline",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"pipeline": {
+									"referenceName": "CopyAWEntity",
+									"type": "PipelineReference"
+								},
+								"waitOnCompletion": true,
+								"parameters": {
+									"Entity": {
+										"value": "@item()",
+										"type": "Expression"
+									}
+								}
+							}
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"Entity": {
+				"type": "string",
+				"defaultValue": "BillOfMaterials"
+			}
+		},
+		"variables": {
+			"Entities": {
+				"type": "Array",
+				"defaultValue": [
+					"Product",
+					"ProductSubcategory",
+					"ProductCategory"
+				]
+			}
+		},
+		"annotations": []
+	}
+}
