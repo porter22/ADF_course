@@ -1,0 +1,46 @@
+{
+	"name": "ParquetViewer",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "part-00191-6fca9d24-6c71-4a00-bc08-56dbf1cfd7f7-c000.snappy.parquet",
+				"folderPath": "Conformed/DimProduct",
+				"fileSystem": "lakeroot"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "ProductId",
+				"type": "INT32"
+			},
+			{
+				"name": "Product",
+				"type": "UTF8"
+			},
+			{
+				"name": "SubcategoryId",
+				"type": "INT32"
+			},
+			{
+				"name": "CategoryId",
+				"type": "INT32"
+			},
+			{
+				"name": "Subcategory",
+				"type": "UTF8"
+			},
+			{
+				"name": "Category",
+				"type": "UTF8"
+			}
+		]
+	}
+}
