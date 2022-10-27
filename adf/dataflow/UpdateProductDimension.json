@@ -58,7 +58,7 @@
 			"scriptLines": [
 				"source(output(",
 				"          ProductId as integer,",
-				"          Product as integer,",
+				"          Product as string,",
 				"          SubcategoryId as integer,",
 				"          {_col3_} as boolean,",
 				"          {_col4_} as boolean,",
@@ -99,7 +99,7 @@
 				"source(output(",
 				"          CategoryId as integer,",
 				"          Category as string,",
-				"          SubcategoryId as string,",
+				"          SubcategoryId as integer,",
 				"          {_col3_} as timestamp",
 				"     ),",
 				"     allowSchemaDrift: true,",
