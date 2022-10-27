@@ -1,0 +1,9 @@
+{
+	"name": "ADFtestRG22",
+	"location": "westeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "84c05491-c238-476b-8b80-b886ddd0e20e",
+		"tenantId": "4913da82-cfc1-4566-b50e-9f9a774f2d73"
+	}
+}
