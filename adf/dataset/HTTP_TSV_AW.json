@@ -5,12 +5,20 @@
 			"referenceName": "HTTP_AWGitHub",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"Filename": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "HttpServerLocation",
-				"relativeUrl": "@{dataset().Entity}.csv"
+				"relativeUrl": {
+					"value": "@dataset().Filename",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": "\t",
 			"escapeChar": "\\",
