@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "HttpServerLocation",
-				"relativeUrl": "@{dataset().Entity}.tsv"
+				"relativeUrl": "@{dataset().Entity}.csv"
 			},
 			"columnDelimiter": "\t",
 			"escapeChar": "\\",
