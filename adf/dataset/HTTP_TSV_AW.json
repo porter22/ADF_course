@@ -1,0 +1,21 @@
+{
+	"name": "HTTP_TSV_AW",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "HTTP_AWGitHub",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "@{dataset().Entity}.tsv"
+			},
+			"columnDelimiter": "\t",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
